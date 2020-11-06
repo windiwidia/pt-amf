@@ -1,0 +1,308 @@
+body {
+  /* background-color: #262533 !important; */
+  color: #5a5c69 !important;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); */
+  /* color: #ffffff !important; */
+}
+
+.nav-link {
+  color: #8f8f8f !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.nav-link {
+  display: inline-block;
+  /* color: #000; */
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8f8f8f !important;
+  transition: width 0.3s ease-in;
+}
+
+.nav-link:hover::after {
+  color: #8f8f8f !important;
+  width: 100%;
+}
+
+/* .nav-item a:hover, */
+.nav-item .active {
+  color: #47474c !important;
+  /* border-bottom: 2px solid #8f8f8f !important;
+  padding-bottom: 2px !important; */
+}
+
+.about-text h1 {
+  font-size: 36px !important;
+}
+
+.about-text p {
+  font-size: 24px !important;
+}
+
+.card-slider {
+  color: rgb(59, 59, 59) !important;
+  opacity: 0.8 !important;
+}
+.shadow-image img {
+  /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.zoom-card {
+  transition: transform 0.3s;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  /* border: 1px solid #262533 !important; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.zoom-card:hover {
+  transform: scale(1.1);
+  background-color: #ffffff !important;
+  /* background-color: rgba(255, 255, 255, 0.1) !important; */
+  /* background-color: #262533 !important; */
+  color: #8f8f8f;
+}
+
+.layer1 {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 5;
+  transition: transform 0.3s;
+}
+.layer1:hover,
+.layer2:hover,
+.layer3:hover {
+  position: relative;
+  transform: scale(1.3);
+  z-index: 20;
+}
+.layer2 {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  z-index: 5;
+  transition: transform 0.3s;
+}
+.layer3 {
+  position: absolute;
+  top: 210px;
+  left: 50px;
+  z-index: 5;
+  transition: transform 0.3s;
+}
+
+.card-num {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-num:hover {
+  background-color: #772726 !important;
+  color: #262533 !important;
+}
+
+.icon-serv i {
+  background: linear-gradient(248.87deg, #772726 0%, #361c1c 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.parallax {
+  background-image: url("/img/parallax.jpg");
+
+  height: 175px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5; */
+  /* filter: brightness(50%); */
+
+  /* text-shadow: 1px 1px 1px #777777 !important; */
+}
+.parallax p,
+.parallax i,
+.parallax h4 {
+  /* color: #47474c !important; */
+  /* opacity: 1 !important; */
+}
+
+.project img {
+  border-radius: 3px;
+}
+
+.compro h1,
+.compro p {
+  color: #8f8f8f !important;
+}
+
+#compro {
+  background-image: linear-gradient(
+    to right,
+    #772726 0%,
+    #361c1c 100%
+  ) !important;
+  /* -webkit-background-clip: text !important; */
+  /* -webkit-text-fill-color: transparent !important; */
+}
+
+/* .quote {
+  background-image: url("/img/bgquote.jpg");
+  height: 150px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* .icon i {
+  /* display: inline-block; */
+/* margin-top: 10px; */
+/* width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #4e73df; */
+/* } */
+
+.icon-text p {
+  margin-left: -10px;
+  width: 400px !important;
+}
+
+.readmore-btn:hover {
+  background-color: #772726 !important;
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+input,
+textarea {
+  /* border-style: none !important; */
+  border-bottom: 1px solid grey !important;
+}
+
+input:focus,
+textarea:focus {
+  /* outline: none !important; */
+  /* border-style: none !important; */
+  box-shadow: none !important;
+}
+label,
+input,
+textarea {
+  transition: all 0.2s !important;
+  touch-action: manipulation !important;
+}
+
+input,
+textarea {
+  font-size: 1em !important;
+  border: 0 !important;
+  border-bottom: 1px solid #ccc !important;
+  font-family: inherit !important;
+  -webkit-appearance: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  cursor: text !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0 !important;
+  border-bottom: 2px solid #772726 !important;
+}
+
+label {
+  letter-spacing: 0.05em !important;
+  font-size: 10px !important;
+  margin-bottom: 0 !important;
+  color: grey !important;
+}
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+  cursor: text !important;
+  max-width: 66.66% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  transform-origin: left bottom !important;
+  transform: translate(0, 2.125rem) scale(1.5) !important;
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder,
+::-webkit-textarea-placeholder {
+  opacity: 0 !important;
+  transition: inherit !important;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 1 !important;
+  color: #ccc !important;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label,
+textarea:not(:placeholder-shown) + label,
+textarea:focus + label {
+  transform: translate(0, 0) scale(1) !important;
+  cursor: pointer !important;
+  color: #772726 !important;
+}
+
+.quote {
+  /* background-color: #2e2c3d; */
+  background-image: linear-gradient(
+    to right,
+    #772726 0%,
+    #361c1c 100%
+  ) !important;
+  color: #ffffff;
+}
+
+.footer {
+  /* background-color: #2e2c3d !important; */
+  color: #ffffff !important;
+}
+
+.line {
+  border-bottom: 1px solid #5a5c69;
+}
+.icon-link a i {
+  color: #8f8f8f !important;
+}
+
+.icon-link a i:hover {
+  color: #ffffff !important;
+}

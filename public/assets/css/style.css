@@ -1,0 +1,19 @@
+body {
+  background-image: url(/img/bglogin.png);
+}
+
+.icon-show {
+  float: right;
+  margin-right: 18px;
+  margin-top: -32px;
+  position: relative;
+  z-index: 2;
+}
+
+.icon-show1 {
+  float: right;
+  margin-right: 10px;
+  margin-top: -26px;
+  position: relative;
+  z-index: 2;
+}
