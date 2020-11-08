@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<?= $this->extend('layout/layout_homepage'); ?>
+<?= $this->section('content_homepage'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<div class="container">
+    <div class="card mb-3">
+        <img src="/img/projects/<?= $projects['image']; ?>" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><b>Klien : </b><?= $projects['klien']; ?></p>
+            <p class="card-text"><?= $projects['alamat']; ?></p>
+            <p class="card-text"><?= $projects['deskripsi']; ?></p>
+        </div>
+    </div>
+</div>
 
-<body>
-    <img src="/img/projects/<?= $projects['image']; ?>" class="card-img">
-    <p class="card-text"><b>Klien : </b><?= $projects['klien']; ?></p>
-    <p class="card-text"><?= $projects['alamat']; ?></p>
-    <p class="card-text"><?= $projects['deskripsi']; ?></p>
-</body>
-
-</html>
+<?= $this->endSection(); ?>

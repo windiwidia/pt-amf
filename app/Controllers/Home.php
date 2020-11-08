@@ -95,6 +95,7 @@ class Home extends BaseController
     {
         $data = [
             'title' => 'Detail Projects',
+            'validation' => \Config\Services::validation(),
             'projects' => $this->projectsModel->getProjects($slug),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
