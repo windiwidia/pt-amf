@@ -34,7 +34,7 @@ class Home extends BaseController
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
 
-        return view('frontEnd/index', $data);
+        return view('pages/index', $data);
     }
 
     public function sendMessage()
@@ -89,6 +89,20 @@ class Home extends BaseController
             // kalo sudah ngesave kita kembalikan ke halaman daftar projects
             return redirect()->to('/home');
         }
+    }
+
+    public function detail($slug)
+    {
+        $data = [
+            'title' => 'Detail Projects',
+            'projects' => $this->projectsModel->getProjects($slug),
+            'data' => $this->authModel->where(['email' => session()->get('email')])->first()
+        ];
+        // jika projects tidak ada di tabel
+        if (empty($data['projects'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Tulisan ' . $slug . ' tidak ditemukan');
+        }
+        return view('/pages/projects', $data);
     }
 
 
