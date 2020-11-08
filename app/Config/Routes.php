@@ -50,6 +50,8 @@ $routes->delete('/client/(:num)', 'Client::delete/$1');
 
 $routes->get('/admin/edit/(:segment)', 'Admin::edit/$1');
 $routes->get('/admin/myprofile/(:any)', 'Admin::myprofile/$1');
+$routes->get('/pages/(:any)', 'Home::detail/$1');
+
 // $routes->get('/admin/changePass', 'Projects::changePass');
 
 
