@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="card mb-5 mt-5">
-        <img src="/img/projects/<?= $projects['image']; ?>" class="card-img-top mw-100">
+        <img src="/img/projects/<?= $projects['image']; ?>" class="card-img-top mw-75">
         <div class="card-body">
             <p class="card-text"><b>Klien : </b><?= $projects['klien']; ?></p>
             <p class="card-text"><?= $projects['alamat']; ?></p>
