@@ -53,7 +53,7 @@
     </nav>
     <!-- End Navbar -->
 
-    <?= $this->renderSection('content'); ?>
+    <?= $this->renderSection('content_homepage'); ?>
 
     <!-- Begin Compro -->
     <section id="compro" class=" compro">
