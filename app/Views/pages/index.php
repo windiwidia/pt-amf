@@ -1,3 +1,5 @@
+<?= $this->extend('layout/layout_homepage'); ?>
+<?= $this->section('content_homepage'); ?>
 <!-- Begin Carousel -->
 <section id="home">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -179,3 +181,4 @@
     </div>
 </section>
 <!-- End Projects -->
+<?= $this->endSection(); ?>
