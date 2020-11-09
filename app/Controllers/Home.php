@@ -116,6 +116,36 @@ class Home extends BaseController
         return view('/pages/about', $data);
     }
 
+    public function services()
+    {
+        $data = [
+            'title' => 'Our Services',
+            'validation' => \Config\Services::validation(),
+            'data' => $this->authModel->where(['email' => session()->get('email')])->first()
+        ];
+        return view('/pages/about', $data);
+    }
+
+    public function projectlist()
+    {
+        $data = [
+            'title' => 'Project List',
+            'validation' => \Config\Services::validation(),
+            'data' => $this->authModel->where(['email' => session()->get('email')])->first()
+        ];
+        return view('/pages/about', $data);
+    }
+
+    public function contact()
+    {
+        $data = [
+            'title' => 'Contact',
+            'validation' => \Config\Services::validation(),
+            'data' => $this->authModel->where(['email' => session()->get('email')])->first()
+        ];
+        return view('/pages/about', $data);
+    }
+
 
     // $email->initialize($config);
 
