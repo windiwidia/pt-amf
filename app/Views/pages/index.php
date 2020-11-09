@@ -69,7 +69,8 @@
                     contractors with experience in mechanical, electrical and plumbing (MEP),
                     and currently covers the scope of civil works as well.
                 </p>
-                <button class="btn btn-dark readmore-btn mb-5">Read More</button>
+                <a href="/home/about" class="btn btn-dark readmore-btn mb-5">Read More</a>
+                <button class="btn btn-dark readmore-btn mb-5"></button>
             </div>
         </div>
     </div>
