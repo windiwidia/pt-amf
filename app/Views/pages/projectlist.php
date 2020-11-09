@@ -6,7 +6,7 @@
         <?php $i = 1;
         foreach ($projects as $p) : ?>
             <div class="col mb-5">
-                <div class="card mx-auto project shadow" style="width: 20rem;">
+                <div class="card mx-auto project shadow project-zoom" style="width: 20rem;">
                     <img src="/img/projects/<?= $p['image']; ?>" alt="" class="gambar" style="width: 20rem; ">
                     <div class="card-body">
                         <h5 class="card-title"><?= ($p['klien']); ?></h5>

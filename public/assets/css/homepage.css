@@ -289,3 +289,13 @@ textarea:focus + label {
 .icon-link a i:hover {
   color: #ffffff !important;
 }
+
+/* For project */
+.project-zoom {
+  transition: transform 0.3s;
+}
+
+.project-zoom:hover {
+  transform: scale(1.1);
+  /* background-color: #ffffff !important; */
+}

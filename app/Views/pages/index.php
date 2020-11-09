@@ -164,7 +164,7 @@
                 } ?>
 
                 <div class="col">
-                    <div class="card mx-auto project shadow" style="width: 20rem;">
+                    <div class="card mx-auto project shadow project-zoom" style="width: 20rem;">
                         <img src="/img/projects/<?= $p['image']; ?>" alt="" class="gambar" style="width: 20rem; ">
                         <div class="card-body">
 
