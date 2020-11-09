@@ -123,7 +123,7 @@ class Home extends BaseController
             'validation' => \Config\Services::validation(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
-        return view('/pages/about', $data);
+        return view('/pages/services', $data);
     }
 
     public function projectlist()
@@ -134,7 +134,7 @@ class Home extends BaseController
             'projects' => $this->projectsModel->getProjects(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
-        return view('/pages/about', $data);
+        return view('/pages/projectlist', $data);
     }
 
     public function contact()
@@ -144,7 +144,7 @@ class Home extends BaseController
             'validation' => \Config\Services::validation(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
-        return view('/pages/about', $data);
+        return view('/pages/contact', $data);
     }
 
 
