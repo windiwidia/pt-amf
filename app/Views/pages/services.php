@@ -1,28 +1,46 @@
-<?= $this->extend('layout/template'); ?>
-
-<?= $this->section('content'); ?>
-<!-- <div class="content-wrapper"> -->
-<!-- Content Header (Page header) -->
-<!-- <div class="content-header"> -->
-<div class="container-fluid">
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Services</h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Post</a></li>
-                <li class="breadcrumb-item active">Services</li>
-            </ol>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
-    <div class="row">
+<?= $this->extend('layout/layout_homepage'); ?>
+<?= $this->section('content_homepage'); ?>
+<div class="container">
+    <h1 class="text-center pt-3">Our Services</h1>
+    <div class="row pt-5 pb-5">
         <div class="col">
+            <div class="card shadow bg-light mb-3 zoom-card" style="max-width: 22rem;">
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut est possimus fugiat excepturi sequi numquam unde illo quis dicta voluptatum temporibus nulla, consectetur consequuntur nostrum repudiandae quasi ea corporis cupiditate!</p>
+                <div class="card-body text-center icon-serv">
+                    <i class="fas fa-cogs fa-3x mb-3 mt-3 "></i>
+                    <h5 class="card-title text-center">Mechanical</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow bg-light mb-3 zoom-card" style="max-width: 22rem;">
+                <div class="card-body text-center icon-serv">
+                    <i class="fas fa-plug fa-3x mb-3 mt-3"></i>
+                    <h5 class="card-title text-center">Electrical</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow bg-light mb-3 zoom-card " style="max-width: 22rem;">
+                <div class="card-body text-center icon-serv">
+                    <i class="fas fa-wrench fa-3x mb-3 mt-3"></i>
+                    <h5 class="card-title text-center">Plumbing</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow bg-light mb-3 zoom-card" style="max-width: 22rem;">
+                <div class="card-body text-center icon-serv">
+                    <i class="fas fa-hard-hat fa-3x mb-3 mt-3"></i>
+                    <h5 class="card-title text-center">Contruction</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div><!-- /.container-fluid -->
-<!-- </div>
-</div> -->
+</div>
+
 <?= $this->endSection(); ?>
