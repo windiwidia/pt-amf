@@ -1,19 +1,9 @@
-<?= $this->extend('layout/template'); ?>
-
-<?= $this->section('content'); ?>
-<!-- <div class="content-wrapper">
-     Content Header (Page header) -->
-<!-- <div class="content-header"> --> -->
-<div class="container-fluid">
+<?= $this->extend('layout/layout_homepage'); ?>
+<?= $this->section('content_homepage'); ?>
+<div class="container">
     <div class="row mb-2">
         <div class="col-sm-6">
             <h1 class="m-0 text-dark">About</h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Post</a></li>
-                <li class="breadcrumb-item active">About</li>
-            </ol>
         </div><!-- /.col -->
     </div><!-- /.row -->
     <div class="row">
