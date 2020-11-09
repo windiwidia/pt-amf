@@ -1,12 +1,8 @@
 <?= $this->extend('layout/layout_homepage'); ?>
 <?= $this->section('content_homepage'); ?>
 <div class="container pt-5 mb-5">
-    <div class="row mb-3 mt-5">
-        <div class="col-sm-6">
-            <h1 class="m-0 text-dark">About</h1>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
-    <div class="row mt-4">
+    <h1 class="text-center mt-5">About Us</h1>
+    <div class="row mt-5">
         <div class="col-4">
             <h4>HISTORY</h4>
         </div>
@@ -48,7 +44,5 @@
             </p>
         </div>
     </div>
-</div><!-- /.container-fluid -->
-<!-- </div>
-</div> -->
+</div>
 <?= $this->endSection(); ?>
