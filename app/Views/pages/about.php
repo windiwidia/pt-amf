@@ -1,7 +1,7 @@
 <?= $this->extend('layout/layout_homepage'); ?>
 <?= $this->section('content_homepage'); ?>
-<div class="container pt-5">
-    <div class="row mb-2 mt-5">
+<div class="container pt-5 mb-5">
+    <div class="row mb-3 mt-5">
         <div class="col-sm-6">
             <h1 class="m-0 text-dark">About</h1>
         </div><!-- /.col -->
