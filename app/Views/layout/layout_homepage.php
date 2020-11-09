@@ -23,19 +23,19 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/home/index/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="/home/about/">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="/home/services/">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#project">Project Lists</a>
+                        <a class="nav-link" href="/home/projectlist/">Project Lists</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="/home/contact/">Contact</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
