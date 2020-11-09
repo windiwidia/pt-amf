@@ -1,7 +1,7 @@
 <?= $this->extend('layout/layout_homepage'); ?>
 <?= $this->section('content_homepage'); ?>
-<div class="container">
-    <h1 class="text-center pt-3">Our Services</h1>
+<div class="container pt-5">
+    <h1 class="text-center mt-5">Our Services</h1>
     <div class="row pt-5 pb-5">
         <div class="col">
             <div class="card shadow bg-light mb-3 zoom-card" style="max-width: 22rem;">
