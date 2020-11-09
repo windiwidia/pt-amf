@@ -70,7 +70,6 @@
                     and currently covers the scope of civil works as well.
                 </p>
                 <a href="/home/about" class="btn btn-dark readmore-btn mb-5">Read More</a>
-                <button class="btn btn-dark readmore-btn mb-5"></button>
             </div>
         </div>
     </div>
