@@ -64,7 +64,7 @@
                     <p>Get to know us?</p>
                 </div>
                 <div class="col mt-4">
-                    <button class="btn btn-dark float-right readmore-btn mt-5 mr-3">Read More</button>
+                    <a href="/pdf/compro-amf.pdf" class="btn btn-dark float-right readmore-btn mt-5 mr-3" target="_blank">Read More</a>
                 </div>
             </div>
         </div>
