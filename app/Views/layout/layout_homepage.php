@@ -167,9 +167,9 @@
     </section>
     <!-- End Contacts -->
     <!-- people say -->
-    <section id="quote" class="quote pt-5 pb-2">
-        <div class="container  ">
-            <div class="row  pb-3  ">
+    <section id="quote" class="quote pt-5 pb-2 bg-dark">
+        <div class="container ">
+            <div class="row  pb-3  text-white">
                 <div class="col text-center">
                     <h2>GET IN TOUCH</h2>
                     <h3>We are always ready to help you</h3>
@@ -204,7 +204,7 @@
     <!-- end people say -->
 
     <!-- footer -->
-    <section id="footer" class="footer pb-3">
+    <section id="footer" class="footer pb-3 bg-dark">
         <div class="container ">
             <div class="line"></div>
             <div class="copyright text-center my-auto text-white pt-3">
