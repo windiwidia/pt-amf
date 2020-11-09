@@ -62,7 +62,7 @@
 
             </div>
             <div class="col-lg-6 pb-5 about-text">
-                <h1>About Us</h1>
+                <h1 class="mt-5">About Us</h1>
                 <h3>General Contractor and Supply</h3>
                 <p class="pb-2">
                     Established since 2017, PT. Agies Mitra Faathir is a company engaged in general
@@ -75,24 +75,24 @@
     </div>
 </section>
 <!-- End About -->
-<section id="parallax" class="parallax pb-3">
+<section id="parallax" class="parallax pb-3 bg-light mt-5">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-3 mt-4 text-center icon-serv">
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3 mt-4 text-center text-dark">
                 <!-- <div class="card card-num"> -->
-                <i class="fas fa-2x fa-tasks mt-3 text-white"></i>
-                <h2 class="num font-wight-bold text-white">100</h2>
-                <p class="text-white font-wight-bold text-white">Projects done</p>
+                <i class="fas fa-2x fa-tasks mt-3 "></i>
+                <h2 class="num font-wight-bold ">100</h2>
+                <p class="text-white font-wight-bold">Projects done</p>
                 <!-- </div> -->
             </div>
-            <div class="col-md-3 mt-4  text-center  icon-serv">
+            <div class="col-md-3 mt-4  text-center">
                 <!-- <div class="card card-num"> -->
                 <i class="fas fa-2x fa-users mt-3"></i>
                 <h4 class="num1">150</h4>
                 <p>Workers</p>
                 <!-- </div> -->
             </div>
-            <div class="col-md-3 mt-4 text-center  icon-serv">
+            <div class="col-md-3 mt-4 text-center">
                 <!-- <div class="card card-num"> -->
                 <i class="far fa-2x fa-handshake mt-3"></i>
                 <h4 class="num2">150</h4>
@@ -151,9 +151,9 @@
 <!-- End Service -->
 
 <!-- Begin Projects -->
-<section id="project" class="bg-white  pt-5 pb-5">
-    <div class="container mt-5">
-        <h1 class="text-center ">Recent Projects</h1>
+<section id="project" class="bg-light pt-5 pb-5">
+    <div class="container">
+        <h1 class="text-center pt-5 ">Recent Projects</h1>
         <div class="row pt-5 mb-5">
             <?php
 
