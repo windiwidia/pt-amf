@@ -110,7 +110,7 @@ body {
   -webkit-text-fill-color: transparent !important;
 }
 
-.parallax {
+/* .parallax {
   background-image: url("/img/parallax.jpg");
 
   height: 175px;
@@ -119,17 +119,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* opacity: 0.5; */
-  /* filter: brightness(50%); */
-
-  /* text-shadow: 1px 1px 1px #777777 !important; */
-}
-.parallax p,
-.parallax i,
-.parallax h4 {
-  /* color: #47474c !important; */
-  /* opacity: 1 !important; */
-}
+  opacity: 0.5; */
+/* filter: brightness(50%);
+} */
 
 .project img {
   border-radius: 3px;
