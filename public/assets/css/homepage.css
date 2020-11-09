@@ -265,15 +265,14 @@ textarea:focus + label {
   color: #772726 !important;
 }
 
-.quote {
-  /* background-color: #2e2c3d; */
+/* .quote {
   background-image: linear-gradient(
     to right,
     #772726 0%,
     #361c1c 100%
   ) !important;
   color: #ffffff;
-}
+} */
 
 .footer {
   /* background-color: #2e2c3d !important; */
@@ -281,7 +280,7 @@ textarea:focus + label {
 }
 
 .line {
-  border-bottom: 1px solid #5a5c69;
+  border-bottom: 1px solid #ffffff;
 }
 .icon-link a i {
   color: #8f8f8f !important;
