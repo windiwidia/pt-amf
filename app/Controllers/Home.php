@@ -21,9 +21,9 @@ class Home extends BaseController
     public function index()
     {
 
-        if (!session()->get('email')) {
-            return redirect()->to('/auth/login');
-        }
+        // if (!session()->get('email')) {
+        //     return redirect()->to('/auth/login');
+        // }
 
         $data = [
             'title' => 'PT Agiez Mitra Faathir',
@@ -131,6 +131,7 @@ class Home extends BaseController
         $data = [
             'title' => 'Project List',
             'validation' => \Config\Services::validation(),
+            'projects' => $this->projectsModel->getProjects(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
         return view('/pages/about', $data);
