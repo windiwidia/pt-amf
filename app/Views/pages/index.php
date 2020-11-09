@@ -106,7 +106,7 @@
 <!-- Begin Services -->
 <section id="services" class=" pt-5 pb-5 ">
     <div class="container">
-        <h1 class="text-center pt-5 ">Why Choose Us</h1>
+        <h1 class="text-center pt-3">Why Choose Us</h1>
         <div class="row pt-5 pb-5">
             <div class="col">
                 <div class="card shadow bg-light mb-3 zoom-card" style="max-width: 22rem;">
@@ -151,9 +151,9 @@
 <!-- End Service -->
 
 <!-- Begin Projects -->
-<section id="project" class="bg-light pt-5 pb-5">
+<section id="project" class="pt-5 pb-5">
     <div class="container">
-        <h1 class="text-center pt-5 ">Recent Projects</h1>
+        <h1 class="text-center pt-3 ">Recent Projects</h1>
         <div class="row pt-5 mb-5">
             <?php
 
