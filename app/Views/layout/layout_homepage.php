@@ -169,14 +169,14 @@
     <!-- people say -->
     <section id="quote" class="quote pt-5 pb-2 bg-dark">
         <div class="container ">
-            <div class="row  pb-3  text-white">
+            <div class="row text-white">
                 <div class="col text-center">
                     <h2>GET IN TOUCH</h2>
                     <h3>We are always ready to help you</h3>
                     <p>There are many ways to contact us, You may drop us a line, give us a call or sen an email, choose what suits you the most</p>
                 </div>
             </div>
-            <div class="row justify-content-center icon-medsos mb-5 ml-4">
+            <div class="row justify-content-center icon-medsos mb-3 ml-4">
                 <div class="col-sm-1 icon-link">
                     <a href="">
                         <i class="fab  fa-lg fa-twitter"></i>
