@@ -53,6 +53,33 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
+            Editing Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsewebsite" aria-expanded="true" aria-controls="collapseTri">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Custom Website</span>
+            </a>
+            <div id="collapsewebsite" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom Website:</h6>
+                    <a class="collapse-item" href="/projects">Carousel Home</a>
+                    <a class="collapse-item" href="/orang/">About</a>
+                    <a class="collapse-item" href="/client/">Parallax</a>
+                    <a class="collapse-item" href="/client/">Services</a>
+                    <a class="collapse-item" href="/client/">Company Profile</a>
+                    <a class="collapse-item" href="/client/">Contact</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
             Profile
         </div>
         <!-- Nav Item - Utilities Collapse Menu -->
