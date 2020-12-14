@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <a href="/carousel-home/create_ch" class="btn btn-primary my-2">Tambah Carousel Home</a>
+                <a href="/CarouselHome/create" class="btn btn-primary my-2">Tambah Carousel Home</a>
 
                 <table class="table">
                     <thead class="thead-light">

@@ -65,7 +65,7 @@
             <div id="collapsewebsite" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Website:</h6>
-                    <a class="collapse-item" href="/projects">Carousel Home</a>
+                    <a class="collapse-item" href="/carousel-home">Carousel Home</a>
                     <a class="collapse-item" href="/orang/">About</a>
                     <a class="collapse-item" href="/client/">Parallax</a>
                     <a class="collapse-item" href="/client/">Services</a>
