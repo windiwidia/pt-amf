@@ -14,7 +14,7 @@
                         <div class="col-lg">
                             <div class="p-4">
                                 <div class="text-center">
-                                    <h3 class="font-weight-bold text-dark">PT AMF</h3>
+                                    <!-- <h3 class="font-weight-bold text-dark">PT AMF</h3> -->
                                     <h1 class="h4 text-gray-900 mb-4">Log in</h1>
                                 </div>
                                 <?= session()->getFlashdata('pesan'); ?>
