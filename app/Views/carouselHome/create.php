@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-8">
             <h2 class="my-3">Form Tambah Carousel Home</h2>
-            <form action="/carousel-home/save/" method="post" enctype="multipart/form-data">
+            <form action="/carouselHome/save/" method="post" enctype="multipart/form-data">
                 <!-- untuk menjaga form agar formnya hanya bisa diinput dihalaman ini saja -->
                 <?= csrf_field(); ?>
                 <div class="form-group row">
