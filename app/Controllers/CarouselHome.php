@@ -30,7 +30,7 @@ class Projects extends BaseController
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
 
-        return view('/carousel-home/index', $data);
+        return view('carousel-home/index', $data);
     }
 
     public function create()
