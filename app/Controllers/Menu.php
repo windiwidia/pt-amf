@@ -131,7 +131,7 @@ class Menu extends BaseController
     public function deletesubmenu($id = null)
     {
 
-        $data['menu'] = $this->userMenuModel->where('id', $id)->delete();
+        $data['menu'] = $this->subMenuModel->where('id', $id)->delete();
         session()->setFlashdata('message', '<div class="alert alert-success" role="alert">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data has been deleted!</div>');
         return redirect()->to('/menu/submenu');
