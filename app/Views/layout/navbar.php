@@ -6,144 +6,101 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <!-- <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div> -->
             <div class="sidebar-brand-text mx-3">PT AMF</div>
         </a>
-
         <!-- Divider -->
         <hr class="sidebar-divider ">
-        <!-- Query Menu -->
-        <?php
+        <div class="sidebar-heading">
+            Admin
+        </div>
 
-        $db      = \Config\Database::connect();
-        $session = \Config\Services::session();
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/admin">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
 
-        $role_id = $session->get('role_id');
-        $builder = $db->table('user_menu');
-        $builder->select('user_menu.id as usermenuid, menu');
-        $builder->join('user_access_menu', 'user_menu.id = user_access_menu.menu_id');
-        $builder->where('user_access_menu.role_id', $role_id);
-        $builder->orderBy('user_access_menu.menu_id', 'asc');
-        $query = $builder->get();
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-        // $menu['user_menu'] = $query->getResult();
-        // var_dump($menu);
-        // die;
-        ?>
         <!-- Heading -->
         <div class="sidebar-heading">
+            Component Interface
         </div>
-        <!-- looping menu -->
-        <?php foreach ($query->getResult() as $m) : ?>
-            <div class="sidebar-heading">
-                <?= $m->menu; ?>
-            </div>
 
-            <!-- siapkan su menu sesuai su menu -->
-            <?php
-            $db      = \Config\Database::connect();
-            // $session = \Config\Services::session();
-            $menuId = $m->usermenuid;
-            $builder = $db->table('user_sub_menu');
-            $builder->select('*');
-            $builder->join('user_menu', 'user_menu.id = user_sub_menu.menu_id');
-            $builder->where('user_sub_menu.menu_id', $menuId);
-            $builder->where('user_sub_menu.is_active', 1);
-            $query = $builder->get();
-            // $submenu['user_menu'] = $query->getResult();
-            ?>
 
-            <?php foreach ($query->getResult() as $sm) : ?>
-                <?php if ($title == $sm->title_menu) : ?>
-                    <!-- Nav Item - Dashboard -->
-                    <li class="nav-item active">
-                    <?php else : ?>
-                    <li class="nav-item">
-                    <?php endif; ?>
-                    <a class="nav-link" href="<?= base_url($sm->url); ?>">
-                        <i class="<?= $sm->icon ?>"></i>
-                        <span><?= $sm->title_menu ?></span></a>
-                    </li>
-
-                <?php endforeach; ?>
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
-            <?php endforeach; ?>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri" aria-expanded="true" aria-controls="collapseTri">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="/projects">Projects</a>
-                        <a class="collapse-item" href="/orang/">Employe</a>
-                        <a class="collapse-item" href="/client/">Client</a>
-                    </div>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTri" aria-expanded="true" aria-controls="collapseTri">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Company Components</span>
+            </a>
+            <div id="collapseTri" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Company Components:</h6>
+                    <a class="collapse-item" href="/projects">Projects</a>
+                    <a class="collapse-item" href="/orang/">Employe</a>
+                    <a class="collapse-item" href="/client/">Client</a>
                 </div>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Editing Interface
             </div>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsewebsite" aria-expanded="true" aria-controls="collapseTri">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Custom Website</span>
-                </a>
-                <div id="collapsewebsite" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Website:</h6>
-                        <a class="collapse-item" href="/carouselHome/">Carousel Home</a>
-                        <a class="collapse-item" href="/orang/">About</a>
-                        <a class="collapse-item" href="/client/">Parallax</a>
-                        <a class="collapse-item" href="/client/">Services</a>
-                        <a class="collapse-item" href="/client/">Company Profile</a>
-                        <a class="collapse-item" href="/client/">Contact</a>
-                    </div>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Editing Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsewebsite" aria-expanded="true" aria-controls="collapseTri">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Management Website</span>
+            </a>
+            <div id="collapsewebsite" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Management Website:</h6>
+                    <a class="collapse-item" href="/carouselHome/">Carousel Home</a>
+                    <a class="collapse-item" href="/orang/">About</a>
+                    <a class="collapse-item" href="/client/">Parallax</a>
+                    <a class="collapse-item" href="/client/">Services</a>
+                    <a class="collapse-item" href="/client/">Company Profile</a>
+                    <a class="collapse-item" href="/client/">Contact</a>
                 </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Profile
             </div>
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>My Profile</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
+        </li>
 
-                        <a class="collapse-item" href="/admin/myprofile/<?= $data['slug']; ?>">My Profile</a>
-                        <a class="collapse-item" href="/admin/editProfile/<?= $data['slug']; ?>">Edit Profile</a>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-                        <a class="collapse-item" href="/admin/change_password">Change Password</a>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Profile
+        </div>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-user"></i>
+                <span>My Profile</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom Utilities:</h6>
 
-                    </div>
+                    <a class="collapse-item" href="/admin/myprofile/<?= $data['slug']; ?>">My Profile</a>
+                    <a class="collapse-item" href="/admin/editProfile/<?= $data['slug']; ?>">Edit Profile</a>
+
+                    <a class="collapse-item" href="/admin/change_password">Change Password</a>
+
                 </div>
-            </li>
-            <hr class="sidebar-divider">
+            </div>
+        </li>
+        <hr class="sidebar-divider">
 
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <!-- <li class="nav-item">
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Utilities</span>
@@ -159,16 +116,16 @@
             </div>
         </li> -->
 
-            <!-- Divider -->
-            <!-- <hr class="sidebar-divider"> -->
+        <!-- Divider -->
+        <!-- <hr class="sidebar-divider"> -->
 
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
+        <!-- Heading -->
+        <!-- <div class="sidebar-heading">
             Addons
         </div> -->
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
+        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Pages</span>
@@ -186,43 +143,43 @@
                 </div>
             </div>
         </li> -->
-            <div class="sidebar-heading">
-                View
-            </div>
-            <li class="nav-item">
-                <a class="nav-link" href="/home">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Front End</span></a>
-            </li>
-            <hr class="sidebar-divider">
+        <div class="sidebar-heading">
+            View
+        </div>
+        <li class="nav-item">
+            <a class="nav-link" href="/home">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Front End</span></a>
+        </li>
+        <hr class="sidebar-divider">
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Charts</span></a>
+        </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tables</span></a>
+        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/auth/logout">
-                    <i class="fas fa-fw fa-sign-out-alt"></i>
-                    <span>Logout</span></a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/auth/logout">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>Logout</span></a>
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
     </ul>
     <!-- End of Sidebar -->
