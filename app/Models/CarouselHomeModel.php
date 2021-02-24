@@ -8,7 +8,7 @@ class CarouselHomeModel extends Model
 {
     protected $table = 'carouselhome';
     // protected $useTimestamps = true;
-    protected $allowedFields = ['slug', 'image', 'title', 'description'];
+    protected $allowedFields = ['image', 'title', 'slug', 'description'];
 
     // supaya lebih rapi kita gabungkan kedalam method sndiri di dalam models
     // getProjects ini bisa jalanin 2 jika ada parameter cari menggunakan where, jika tidak ada ambil semua data projects 

@@ -18,7 +18,7 @@
             <a href="/client/create" class="btn btn-primary my-2">Tambah Data Client</a>
 
             <?php if ($pesan = session()->getFlashdata('pesan')) : ?>
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <?= session()->getFlashdata('pesan'); ?>
                 </div>
             <?php endif; ?>

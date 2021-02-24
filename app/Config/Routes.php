@@ -52,6 +52,11 @@ $routes->delete('/client/(:num)', 'Client::delete/$1');
 $routes->get('/admin/edit/(:segment)', 'Admin::edit/$1');
 $routes->get('/admin/myprofile/(:any)', 'Admin::myprofile/$1');
 
+$routes->get('/carouselhome/create', 'Carouselhome::create');
+$routes->get('/carouselhome/edit/(:segment)', 'Carouselhome::edit/$1');
+$routes->delete('/carouselhome/(:num)', 'Carouselhome::delete/$1');
+$routes->get('/carouselhome/(:any)', 'Carouselhome::detail/$1');
+
 // $routes->get('/admin/changePass', 'Projects::changePass');
 
 

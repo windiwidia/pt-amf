@@ -7,7 +7,7 @@ namespace App\Controllers;
 use App\Models\CarouselHomeModel;
 use App\Models\AuthModel;
 
-class Projects extends BaseController
+class Carouselhome extends BaseController
 {
     protected $carouselhomeModel;
     protected $AuthModel;
@@ -24,13 +24,11 @@ class Projects extends BaseController
         helper('text');
         $data = [
             'title' => 'Carousel Home',
-            // data dikirim ke return view
-            // tidak perlu parameter karena mau find all
-            'projects' => $this->carouselhomeModel->getCarouselHome(),
+            'carouselhome' => $this->carouselhomeModel->getCarouselHome(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
 
-        return view('carousel-home/index', $data);
+        return view('carouselhome/index', $data);
     }
 
     public function create()
@@ -42,7 +40,7 @@ class Projects extends BaseController
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
 
-        return view('carousel-home/create_ch', $data);
+        return view('carouselhome/create', $data);
     }
 
     public function save()
@@ -71,7 +69,7 @@ class Projects extends BaseController
             ]
 
         ])) {
-            return redirect()->to('/CarouselHome/create')->withInput();
+            return redirect()->to('/carouselhome/create')->withInput();
         }
 
         // ambil gambar
@@ -86,7 +84,7 @@ class Projects extends BaseController
             $namaImage = $fileImage->getRandomName();
             // dd('fileImage');
             //pindahkan file ke folder img
-            $fileImage->move('img/carousel-home', $namaImage);
+            $fileImage->move('img/carouselhome', $namaImage);
         }
         // ambil nama file dengan nama yang sama saat upload
         // $namaImage = $fileImage->getName();
@@ -106,6 +104,6 @@ class Projects extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 
         // kalo sudah ngesave kita kembalikan ke halaman daftar projects
-        return redirect()->to('/CarouselHome');
+        return redirect()->to('/carouselhome');
     }
 }

@@ -20,15 +20,10 @@ class Projects extends BaseController
     }
     public function index()
     {
-        // instansiasi class Model untuk database
-        // $projectsModel = new \App\Models\ProjectsModel();
-        // $projectsModel = new ProjectsModel();
-        // $projects =  $this->projectsModel->findAll();
+
         helper('text');
         $data = [
             'title' => 'Daftar Projects',
-            // data dikirim ke return view
-            // tidak perlu parameter karena mau find all
             'projects' => $this->projectsModel->getProjects(),
             'data' => $this->authModel->where(['email' => session()->get('email')])->first()
         ];
