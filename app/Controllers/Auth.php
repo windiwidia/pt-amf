@@ -16,6 +16,7 @@ class Auth extends BaseController
         // parent::__construct();
         $this->authModel = new AuthModel();
         $this->activationModel = new ActivationModel();
+        // $validation =  \Config\Services::validation();
         // $this->load = \Config\Services::validation();
     }
     public function index()
@@ -81,8 +82,13 @@ class Auth extends BaseController
                         ];
                         //simpan ke dalam session
                         // $session = session();
-                        // $session = \Config\Services::session();
-                        session()->set($data);
+                        $session = \Config\Services::session();
+                        $session->set($data);
+                        if ($user['role_id'] == 1) {
+                            return redirect()->to('/admin');
+                        } else {
+                            return redirect()->to('/user');
+                        }
                         // dd($data);
                         session()->setFlashdata('pesan-login', '<div class="alert alert-info">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -159,7 +165,7 @@ class Auth extends BaseController
         } else {
             $slug = $this->request->getVar('firstname');
             $slug .= url_title($this->request->getVar('lastname'), '-', true);
-            $email = $this->request->getVar(('email'));
+            $email = $this->request->getVar('email');
             // $password = $this->request->getVar('password1');
             $this->authModel->save([
                 'firstname' => $this->request->getVar('firstname'),
@@ -168,13 +174,14 @@ class Auth extends BaseController
                 'email' =>  $email,
                 'image' => 'default_profile.jpg',
                 'password' => password_hash($this->request->getVar('password1'), PASSWORD_DEFAULT),
-                'role_id' => 1,
+                'role_id' => 2,
                 'is_active' => 0
             ]);
 
             // siapkan token 
             // terjemahkan supaya bisa di kenali mysql
             $token = base64_encode(random_bytes(32));
+            // $email = $this->request->getVar(('email'));
             // var_dump($token);
             // die;
             $this->activationModel->save([
@@ -414,5 +421,14 @@ class Auth extends BaseController
         session()->setFlashdata('pesan', '<div class="alert alert-success" role="alert">You have been logged out.</div>');
 
         return redirect()->to('/auth/login');
+    }
+
+    public function blocked()
+    {
+        $data = [
+            'title' => 'Bloked',
+            'validation' => \Config\Services::validation()
+        ];
+        return view('auth/blocked', $data);
     }
 }

@@ -14,6 +14,7 @@ class Admin extends BaseController
 	public function __construct()
 	{
 		// parent::__construct();
+
 		// $this->projectsModel = new ProjectsModel();
 		$this->authModel = new AuthModel();
 		$this->load = \Config\Services::validation();
@@ -27,7 +28,7 @@ class Admin extends BaseController
 			return redirect()->to('/auth/login');
 		}
 		$data = [
-			'title' => 'Admin PT AMF',
+			'title' => 'Dashboard',
 			'user' => $this->authModel->getAuth(),
 			'data' => $this->authModel->where(['email' => session()->get('email')])->first()
 		];

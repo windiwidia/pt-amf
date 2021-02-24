@@ -26,14 +26,14 @@
         <div class="row no-gutters">
             <div class="col-md-4">
 
-                <img src="/img/profile/<?= $user['image']; ?>" class="card-img">
+                <img src="/img/profile/<?= $data['image']; ?>" class="card-img">
 
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?= ucfirst($user['firstname']) . ' ' . ucfirst($user['lastname']); ?></h5>
-                    <p class="card-text"><?= $user['email']; ?></p>
-                    <p class="card-text"><small class="text-muted">Member since : <?= date('D, d M Y H:i:s', strtotime($user['created_at']));  ?></small></p>
+                    <h5 class="card-title"><?= ucfirst($data['firstname']) . ' ' . ucfirst($data['lastname']); ?></h5>
+                    <p class="card-text"><?= $data['email']; ?></p>
+                    <p class="card-text"><small class="text-muted">Member since : <?= date('D, d M Y H:i:s', strtotime($data['created_at']));  ?></small></p>
                 </div>
             </div>
         </div>
